@@ -1,4 +1,4 @@
-module gorgonia.org/gorgonia
+module github.com/jeremypansier/gorgonia
 
 go 1.12
 
