@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	G "gorgonia.org/gorgonia"
+	G "github.com/jeremypansier/gorgonia"
 	"gorgonia.org/tensor"
 )
 

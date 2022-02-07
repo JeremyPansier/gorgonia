@@ -70,7 +70,7 @@ import (
 	"fmt"
 	"log"
 
-	. "gorgonia.org/gorgonia"
+	. "github.com/jeremypansier/gorgonia"
 )
 
 // Basic example of representing mathematical equations as graphs.

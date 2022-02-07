@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"gorgonia.org/gorgonia"
-	xvm "gorgonia.org/gorgonia/x/vm"
+	"github.com/jeremypansier/gorgonia"
+	xvm "github.com/jeremypansier/gorgonia/x/vm"
 )
 
 func ExampleDumpTrace() {

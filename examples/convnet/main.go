@@ -13,9 +13,9 @@ import (
 	"net/http"
 	_ "net/http/pprof"
 
+	G "github.com/jeremypansier/gorgonia"
+	"github.com/jeremypansier/gorgonia/examples/mnist"
 	"github.com/pkg/errors"
-	G "gorgonia.org/gorgonia"
-	"gorgonia.org/gorgonia/examples/mnist"
 	"gorgonia.org/tensor"
 
 	"time"

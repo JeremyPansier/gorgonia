@@ -3,12 +3,12 @@ package dot
 import (
 	"sort"
 
+	"github.com/jeremypansier/gorgonia"
+	internalEncoding "github.com/jeremypansier/gorgonia/internal/encoding"
 	"gonum.org/v1/gonum/graph"
 	"gonum.org/v1/gonum/graph/encoding"
 	gonumDot "gonum.org/v1/gonum/graph/encoding/dot"
 	"gonum.org/v1/gonum/graph/simple"
-	"gorgonia.org/gorgonia"
-	internalEncoding "gorgonia.org/gorgonia/internal/encoding"
 )
 
 func subGraphs() map[internalEncoding.Group]subgrapher {

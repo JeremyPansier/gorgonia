@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	"gorgonia.org/gorgonia"
-	G "gorgonia.org/gorgonia"
+	"github.com/jeremypansier/gorgonia"
+	G "github.com/jeremypansier/gorgonia"
 	"gorgonia.org/tensor"
 )
 

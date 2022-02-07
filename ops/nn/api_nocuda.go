@@ -1,9 +1,10 @@
+//go:build !cuda
 // +build !cuda
 
 package nnops
 
 import (
-	G "gorgonia.org/gorgonia"
+	G "github.com/jeremypansier/gorgonia"
 	"gorgonia.org/tensor"
 )
 

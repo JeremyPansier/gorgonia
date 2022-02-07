@@ -1,3 +1,4 @@
+//go:build cuda
 // +build cuda
 
 package nnops
@@ -9,11 +10,11 @@ import (
 	"unsafe"
 
 	"github.com/chewxy/hm"
+	"github.com/jeremypansier/gorgonia"
 	"github.com/pkg/errors"
 	"gorgonia.org/cu"
 	cudnn "gorgonia.org/cu/dnn"
 	t2cudnn "gorgonia.org/cu/dnn/interop"
-	"gorgonia.org/gorgonia"
 	"gorgonia.org/tensor"
 )
 

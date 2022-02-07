@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-gota/gota/dataframe"
 	"github.com/go-gota/gota/series"
+	"github.com/jeremypansier/gorgonia"
 	"gonum.org/v1/gonum/mat"
-	"gorgonia.org/gorgonia"
 	"gorgonia.org/tensor"
 )
 

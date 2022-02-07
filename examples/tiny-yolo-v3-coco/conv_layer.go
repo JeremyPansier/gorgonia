@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/jeremypansier/gorgonia"
 	"github.com/pkg/errors"
-	"gorgonia.org/gorgonia"
 	"gorgonia.org/tensor"
 )
 

@@ -5,8 +5,8 @@ import (
 	"hash"
 
 	"github.com/chewxy/hm"
+	"github.com/jeremypansier/gorgonia/internal/encoding"
 	"github.com/pkg/errors"
-	"gorgonia.org/gorgonia/internal/encoding"
 	"gorgonia.org/tensor"
 )
 

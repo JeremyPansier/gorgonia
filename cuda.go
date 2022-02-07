@@ -10,10 +10,10 @@ import (
 	"sync"
 	"unsafe"
 
+	"github.com/jeremypansier/gorgonia/cuda"
 	"github.com/pkg/errors"
 	"gorgonia.org/cu"
 	cudnn "gorgonia.org/cu/dnn"
-	"gorgonia.org/gorgonia/cuda"
 	"gorgonia.org/tensor"
 )
 

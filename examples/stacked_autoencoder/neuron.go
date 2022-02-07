@@ -5,7 +5,7 @@ import (
 	"encoding/gob"
 	"errors"
 
-	. "gorgonia.org/gorgonia"
+	. "github.com/jeremypansier/gorgonia"
 	"gorgonia.org/tensor"
 )
 

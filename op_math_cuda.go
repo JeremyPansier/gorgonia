@@ -1,3 +1,4 @@
+//go:build cuda
 // +build cuda
 
 package gorgonia
@@ -6,9 +7,9 @@ import (
 	"fmt"
 	"unsafe"
 
+	"github.com/jeremypansier/gorgonia/cuda"
 	"github.com/pkg/errors"
 	"gorgonia.org/cu"
-	"gorgonia.org/gorgonia/cuda"
 	"gorgonia.org/tensor"
 )
 
