@@ -13,7 +13,7 @@ import (
 	"gorgonia.org/cu"
 	cudnn "gorgonia.org/cu/dnn"
 	t2cudnn "gorgonia.org/cu/dnn/interop"
-	"gorgonia.org/gorgonia"
+	"github.com/jeremypansier/gorgonia"
 	"gorgonia.org/tensor"
 )
 

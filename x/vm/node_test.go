@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"gorgonia.org/gorgonia"
+	"github.com/jeremypansier/gorgonia"
 )
 
 func Test_receiveInput(t *testing.T) {

@@ -2,7 +2,7 @@ package dot
 
 import (
 	"gonum.org/v1/gonum/graph"
-	"gorgonia.org/gorgonia"
+	"github.com/jeremypansier/gorgonia"
 )
 
 func copyGraph(dst graph.Builder, src graph.Graph) {

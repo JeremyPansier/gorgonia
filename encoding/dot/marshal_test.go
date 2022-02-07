@@ -3,7 +3,7 @@ package dot
 import (
 	"testing"
 
-	"gorgonia.org/gorgonia"
+	"github.com/jeremypansier/gorgonia"
 )
 
 func TestMarshal(t *testing.T) {

@@ -1,4 +1,4 @@
-module gorgonia.org/gorgonia/examples/mnist
+module github.com/jeremypansier/gorgonia/examples/mnist
 
 
 go 1.15
