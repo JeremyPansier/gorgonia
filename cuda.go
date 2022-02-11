@@ -1,3 +1,4 @@
+//go:build cuda
 // +build cuda
 
 package gorgonia
@@ -139,7 +140,7 @@ func (m *ExternMetadata) GetFromValue(dev Device, v Value) (tensor.Memory, error
 	}
 	ptr := cu.DevicePtr(mem.Uintptr())
 	ctx := m.engines[dev].Context()
-	ctx.MemcpyHtoD(ptr, unsafe.Pointer(v.Uintptr()), memsize)
+	ctx.MemcpyHtoD(ptr, unsafe.Pointer(v), memsize)
 	return cu.DevicePtr(ptr), nil
 }
 
@@ -184,7 +185,7 @@ func (m *ExternMetadata) Transfer(toDev, fromDev Device, v Value, synchronous bo
 		if mem, err = m.Get(toDev, memsize); err != nil {
 			return
 		}
-		ctx.MemcpyHtoD(cu.DevicePtr(mem.Uintptr()), unsafe.Pointer(v.Uintptr()), memsize)
+		ctx.MemcpyHtoD(cu.DevicePtr(mem.Uintptr()), unsafe.Pointer(v), memsize)
 		return makeValueFromMem(TypeOf(v), v.Shape(), mem)
 
 	case fromDev != CPU && toDev == CPU:
@@ -197,7 +198,7 @@ func (m *ExternMetadata) Transfer(toDev, fromDev Device, v Value, synchronous bo
 		if retVal, err = makeValue(TypeOf(v), v.Shape()); err != nil {
 			return
 		}
-		ctx.MemcpyDtoH(unsafe.Pointer(retVal.Uintptr()), cu.DevicePtr(v.Uintptr()), memsize)
+		ctx.MemcpyDtoH(unsafe.Pointer(retVal.Uintptr()), cu.DevicePtr(v), memsize)
 		return
 	case fromDev == toDev:
 		return v, nil
