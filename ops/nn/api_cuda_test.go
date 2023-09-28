@@ -8,7 +8,7 @@ import (
 	"os"
 	"testing"
 
-	G "gorgonia.org/gorgonia"
+	G "github.com/jeremypansier/gorgonia"
 	"gorgonia.org/tensor"
 )
 

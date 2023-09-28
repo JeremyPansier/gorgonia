@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"gorgonia.org/gorgonia"
+	"github.com/jeremypansier/gorgonia"
 )
 
 // unmangleName replaces the pointer-based name with the node name.

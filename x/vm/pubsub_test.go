@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"gorgonia.org/gorgonia"
+	"github.com/jeremypansier/gorgonia"
 )
 
 func Test_merge(t *testing.T) {

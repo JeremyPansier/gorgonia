@@ -6,6 +6,7 @@ import (
 	"github.com/pkg/errors"
 	"gorgonia.org/cu"
 	"gorgonia.org/tensor"
+	"unsafe"
 )
 
 func finalizeTapeMachine(m *tapeMachine) {
@@ -187,14 +188,14 @@ func (instr *execOp) exec(m *tapeMachine) (err error) {
 					}
 
 					// copy dv.d to d
-					ctx.MemcpyHtoD(mem.(cu.DevicePtr), dv.d.Pointer(), memsize)
+					ctx.MemcpyHtoD(mem.(cu.DevicePtr), unsafe.Pointer(dv.d.Uintptr()), memsize)
 
 					// perform  the op
 					if _, err = add.CUDADo(m, dev, d, d, v); err != nil {
 						return
 					}
 					// copy the value back into dv.d
-					ctx.MemcpyDtoH(dv.d.Pointer(), mem.(cu.DevicePtr), memsize)
+					ctx.MemcpyDtoH(unsafe.Pointer(dv.d.Uintptr()), mem.(cu.DevicePtr), memsize)
 					m.Put(dev, mem, memsize) // then free it
 
 					src.bind(dv)
@@ -224,12 +225,12 @@ func (instr deviceTransport) exec(m *tapeMachine) (err error) {
 	case instr.from.device == CPU && instr.to.device != CPU:
 		memsize := int64(from.MemSize())
 		ctx = m.Contexts()[int(instr.to.device)]
-		ctx.MemcpyHtoD(cu.DevicePtr(to.Uintptr()), from.Pointer(), memsize)
+		ctx.MemcpyHtoD(cu.DevicePtr(to.Uintptr()), unsafe.Pointer(from.Uintptr()), memsize)
 	case instr.from.device != CPU && instr.to.device == CPU:
 		dt := from.Dtype()
 		memsize := calcMemSize(dt, from.Shape())
 		ctx = m.Contexts()[int(instr.from.device)]
-		ctx.MemcpyDtoH(to.Pointer(), cu.DevicePtr(from.Uintptr()), memsize)
+		ctx.MemcpyDtoH(unsafe.Pointer(to.Uintptr()), cu.DevicePtr(from.Uintptr()), memsize)
 
 		// when copying from device to host, it's assumed that the host will want to immediately use
 		// so signal the DoWork

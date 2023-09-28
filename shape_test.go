@@ -3,7 +3,7 @@ package gorgonia_test
 import (
 	"fmt"
 
-	. "gorgonia.org/gorgonia"
+	. "github.com/jeremypansier/gorgonia"
 	"gorgonia.org/tensor"
 )
 

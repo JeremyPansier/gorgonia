@@ -40,7 +40,7 @@ Gorgonia aims to do the same, but for the Go environment. Gorgonia is currently 
 
 ## Installation #
 
-The package is go-gettable: `go get -u gorgonia.org/gorgonia`.
+The package is go-gettable: `go get -u github.com/jeremypansier/gorgonia`.
 
 Gorgonia is compatible with go modules.
 
@@ -70,7 +70,7 @@ import (
 	"fmt"
 	"log"
 
-	. "gorgonia.org/gorgonia"
+	. "github.com/jeremypansier/gorgonia"
 )
 
 // Basic example of representing mathematical equations as graphs.

@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"gonum.org/v1/gonum/graph/encoding"
-	"gorgonia.org/gorgonia"
-	internalEncoding "gorgonia.org/gorgonia/internal/encoding"
+	"github.com/jeremypansier/gorgonia"
+	internalEncoding "github.com/jeremypansier/gorgonia/internal/encoding"
 )
 
 type node struct {

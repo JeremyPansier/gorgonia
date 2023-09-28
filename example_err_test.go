@@ -3,7 +3,7 @@ package gorgonia_test
 import (
 	"fmt"
 
-	. "gorgonia.org/gorgonia"
+	. "github.com/jeremypansier/gorgonia"
 )
 
 // Gorgonia provides an API that is fairly idiomatic - most of the functions in in the API return (T, error).

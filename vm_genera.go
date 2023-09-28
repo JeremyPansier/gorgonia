@@ -595,9 +595,8 @@ backwards:
 
 func (m *lispMachine) logf(format string, attrs ...interface{}) {
 	switch {
-	case machineDev, autodiffDev:
+	case autodiffDev:
 		if machineDev {
-
 			machineLogf(format, attrs...)
 		} else {
 			autodiffLogf(format, attrs...)
